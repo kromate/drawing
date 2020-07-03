@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: blueviolet; */
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    transition: 1s ease;
+    background-color: rgb(5, 5, 5);
+  }
+
+  main {
+    background-color: rgb(5, 5, 5);
+    /* margin: 0px auto 0px auto; */
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 70vh;
+    width: 70vh;
+    display: flex;
+    border-radius: 35px;
+    box-shadow: 2px 3px 19px 2px;
+    transition: 2s;
+  }
+
+  main p {
+
+    text-align: center;
+    font-size: 20rem;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: cornsilk;
+    text-shadow: 17px -19px 20px;
+    color: darkmagenta;
+    transition: 3s;
+  }
+  .di{
+    font-size: 200rem;
+  }
+</style>
+
+<body>
+  <main>
+    <p id="draw"></p>
+  </main>
+
+</body>
+<script>
+  let main = document.querySelector('#draw')
+  let Name = 'Anthony';
+
+  for (var i = 0; i <= Name.length-1; i++) {
+    (function (index) {
+      setTimeout(function () { 
+        console.log(index);
+        main.classList.add('di');
+         main.innerHTML = Name[index] 
+         main.classList.remove('di');
+        }, i * 1000);
+    })(i);
+  }
+
+
+</script>
+
+</html>
