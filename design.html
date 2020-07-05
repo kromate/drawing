@@ -5,9 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+ 
 </head>
-<style>
+
+
+<body>
+
+
+
+</body>
+
+<script>
+  function start() {
+    const body = document.querySelector('body')
+    body.innerHTML = `
+    <style>
   body {
+   font-family: 'Galada', cursive;
     width: 100%;
     height: 100%;
     display: flex;
@@ -47,10 +63,10 @@
   }
   .di{
     font-size: 5rem;
-    background-image: linear-gradient(rgb(24, 23, 23), rgb(84, 5, 90));
+    background-image: linear-gradient(rgb(24, 23, 23), rgb(61, 11, 65));
     -webkit-text-stroke-color: rgb(59, 10, 59);
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-fill-color: rgb(180, 169, 169);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: rgb(8, 8, 8);
     border-radius: 50px;
   }
   .wrapper{
@@ -67,7 +83,6 @@
 
 </style>
 
-<body>
   <div class="wrapper">
       <main>
         <p id="draw"></p>
@@ -75,22 +90,192 @@
   </div>
 
 
-</body>
+    `
+
+  }
+  start()
+</script>
+
 <script>
   let main = document.querySelector('#draw')
   let Name = ['A','N','T','H','O','N','Y','ANTHONY'];
 
-  for (var i = 0; i <= Name.length-1; i++) {
+function count(){
+  for (var i = 0; i <= Name.length - 1; i++) {
     (function (index) {
-      setTimeout(function () { 
+      setTimeout(function () {
         console.log(index);
         main.classList.add('di');
-         main.innerHTML = Name[index] 
-        }, i * 500);
+        main.innerHTML = Name[index]
+      }, i * 500);
     })(i);
+  }
+}
+setTimeout(count, 1500)
+
+
+
+</script>
+
+<script>
+
+
+
+
+  function load() {
+    const body = document.querySelector('body')
+    body.innerHTML = `  <article>
+    <div class="gri one"></div>
+    <div class="gri two"></div>
+    <div class="gri three"></div>
+    <div class="gri four"></div>
+    <div class="gri five"></div>
+  </article>
+<main>
+      <div class="aside nav">
+        
+          <h1>Welcome</h1>
+        <p class="nav-item"><span class="nav-name">About Me</span></p>
+        <p class="nav-item"><span class="nav-name">Experience</span></p>
+        <p class="nav-item"><span class="nav-name">Projects</span></p>
+        <p class="nav-item"><span class="nav-name">Contact</span></p>
+      </div>
+      </main>
+      
+      
+      
+      <style>
+  body{
+    font-family: 'Galada', cursive;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  article{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr ;
+    position: absolute;
+    z-index: 1;
+  }
+  article .gri{
+    background-color: darkorange;
+    width: 100% ;
+    height: 20vh;
+  }
+  .five{
+    transform: translateY(-500%);
+    animation: slide 1s  forwards;
+  }
+  .four{
+    transform: translateY(-500%);
+    animation: slide 1s 0.4s forwards;
+  }
+  .three{
+    transform: translateY(-500%);
+    animation: slide 1s 0.6s forwards;
+  }
+  .two{
+    transform: translateY(-500%);
+    animation: slide 1s 0.8s forwards;
+  }
+  .one{
+    transform: translateY(-500%);
+    animation: slide 1s 1s forwards;
+  }
+
+  @keyframes slide {
+    0%{
+      transform: translateY(-500%);
+    }
+    100%{
+      transform: translateY(0%);
+    }    
+  }
+
+  main{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: darkorange;
+    z-index: 2;
+    animation: fade 3.5s  1s   both;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    transition: 5s;
+  }
+
+  @keyframes fade {
+    0%{
+      opacity: 0;
+      z-index: -1;
+      display: none;
+    }
+    100%{
+      opacity: 1;
+      z-index: 2;
+      display: block;
+    }
   }
 
 
+
+
+/* ================================== */
+.nav-item {
+  padding: 1rem;
+  padding-left: auto;
+  padding-right: auto;
+  color: white;
+  /* margin: 1rem; */
+  /* background-color: white; */
+  /* width: 20vw; */
+  text-align: center;
+  font-size: 20px;
+  z-index: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 0.9s;
+}
+
+.nav-item:hover {
+  color: black;
+  padding: 1rem;
+  /* margin: 1rem; */
+  background-color: white;
+  /* width: 20vw; */
+  text-align: center;
+  border-radius: 50px;
+  font-size: 20px;
+  z-index: 0;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+
+
+.aside {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: 5s linear;
+  animation: fade 7s 2s     forwards;
+
+}
+</style>`
+
+  }
+
+  setTimeout(load, 7000)
 </script>
 
 </html>
