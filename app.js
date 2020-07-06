@@ -68,7 +68,7 @@ class TypeWriter {
           //move to the next word in the HTML property
           this.wordIndex++;
           // pause time before the word start typing
-          typeSpeed = 1000;
+          typeSpeed = 500;
 
       }
 
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', init);
 function init() {
 const txtElement = document.querySelector('.txt-type');
 // const words = JSON.parse(txtElement.getAttribute('data-words'));
-const words = ['Frontend Developer?','Mobile Developer?', 'Problem Solver?'];
+const words = ['i if fv hcbvhdxfcd xvjcbvhguxfdjvncvnjcbv.cmvkcnvchvjb Developer?','Mobile Developer?', 'Problem Solver?'];
 
 
 // const wait = txtElement.getAttribute('data-wait');

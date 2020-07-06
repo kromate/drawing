@@ -10,13 +10,13 @@
 body {
   margin: 0;
   padding: 0;
-  background: lightgoldenrodyellow;
+  background: black;
 }
 .paper {
   position: absolute;
   height: 550px;
   width: 450px;
-  background: rgba(255,255,255,0.9);
+  background: rgba(19, 9, 9, 0.9);
   margin: -275px -225px;
   left: 50%;
   top: 50%;
@@ -28,15 +28,17 @@ body {
   left: 45px;
   height: 100%;
   width: 2px;
-  background: rgba(255,0,0,0.4);
+  background: white;
 }
 .lines {
   margin-top: 40px;
   height: calc(100% - 40px);
   width: 100%;
-  background-image: repeating-linear-gradient(white 0px, 24px, steelblue 25px);;
+  background-image: repeating-linear-gradient(black 0px, 24px, darkorange 25px);
 }
+
 .text {
+  color: white;
   position: absolute;
   top: 65px;
   left: 55px;
@@ -47,18 +49,25 @@ body {
   overflow: hidden;
   outline: none;
 }
+h2{
+  margin: 0;
+}
 
 </style>
 <body>
   <div class="paper">
     <div class="lines">
-      <div class="text" contenteditable spellcheck="true">
-        You can edit this text! <br /><br />
+      <div class="text" spellcheck="true">
+        <h2>hi</h2> <br /><br />
         Cupcake ipsum dolor sit amet liquorice fruitcake. Candy canes jelly beans sweet roll cupcake lollipop. Powder
         carrot cake toffee brownie. Marshmallow sweet roll donut. Chocolate cake apple pie candy canes tiramisu dragée
         wafer. Croissant cookie lemon drops tiramisu jelly-o donut. Sweet gummi bears ice cream.</div>
     </div>
+    <!-- <h1 style="color: white;">Need a <span class="txt-type" data-wait="2500"
+        data-words="[&quot;Website?&quot;, &quot;Designer?&quot;, &quot;Photographer?&quot;]"><span
+          class="txt"></span></span><i class="fas fa-pencil-alt erasing-animation"></i></h1> -->
   
   </div>
+  <script src="app.js"></script>
 </body>
 </html>
