@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Document</title>
 </head>
 <style>
@@ -52,22 +53,44 @@ body {
 h2{
   margin: 0;
 }
-
+.fade{
+  opacity: 0;
+  transition: 1s linear;
+}
+.btn{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+button{
+  padding: 0.8rem;
+  border-radius: 35px;
+  background-color: darkorange;
+  outline: none;
+  border: none;
+  margin: 1rem;
+}
 </style>
 <body>
   <div class="paper">
     <div class="lines">
       <div class="text" spellcheck="true">
-        <h2>hi</h2> <br /><br />
-        Cupcake ipsum dolor sit amet liquorice fruitcake. Candy canes jelly beans sweet roll cupcake lollipop. Powder
-        carrot cake toffee brownie. Marshmallow sweet roll donut. Chocolate cake apple pie candy canes tiramisu dragée
-        wafer. Croissant cookie lemon drops tiramisu jelly-o donut. Sweet gummi bears ice cream.</div>
+        <h2>hi</h2> <br/>
+        <span class="txt-type" data-wait="2500"
+        data-words="[&quot;I am Anthony, a Frontend developer with a passion to innovate, create and design &quot;]">
+        <span class="txt"></span></span> <span class="material-icons">edit</span>
+        </span>
+      </div>
     </div>
-    <!-- <h1 style="color: white;">Need a <span class="txt-type" data-wait="2500"
-        data-words="[&quot;Website?&quot;, &quot;Designer?&quot;, &quot;Photographer?&quot;]"><span
-          class="txt"></span></span><i class="fas fa-pencil-alt erasing-animation"></i></h1> -->
-  
   </div>
+  <div class="btn">
+    <div><button>Menu</button></div>
+    <div><button>Experience</button></div>
+    </div>
   <script src="app.js"></script>
 </body>
 </html>
