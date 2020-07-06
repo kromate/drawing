@@ -117,10 +117,7 @@
 
 
 <script>
-
-
-
-
+  
   function load() {
     const body = document.querySelector('body')
     body.innerHTML = ` 
@@ -283,7 +280,7 @@
   <div class="aside nav">
 
     <h1>Hello</h1>
-    <p class="nav-item"><span class="nav-name">About Me</span></p>
+    <p class="nav-item" onClick='intro()'><span class="nav-name">About Me</span></p>
     <p class="nav-item"><span class="nav-name">Experience</span></p>
     <p class="nav-item"><span class="nav-name">Projects</span></p>
     <p class="nav-item"><span class="nav-name">Contact</span></p>
@@ -296,5 +293,142 @@
 
   setTimeout(load, 2300)
 </script> 
+
+<script>
+  intro = function(){
+      const body = document.querySelector('body')
+        body.innerHTML = ` 
+        <style>
+  @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    animation: fade 3s forwards;
+  }
+
+    @keyframes fade {
+    0% {
+      opacity: 0;
+      z-index: -1;
+      display: none;
+    }
+
+    100% {
+      opacity: 1;
+      z-index: 2;
+      display: block;
+    }
+  }
+
+  .paper {
+    position: absolute;
+    height: 550px;
+    width: 450px;
+    background: rgba(19, 9, 9, 0.9);
+    margin: -275px -225px;
+    left: 50%;
+    top: 55%;
+    box-shadow: 0px 0px 5px 0px #888;
+  }
+
+  .paper::before {
+    content: '';
+    position: absolute;
+    left: 45px;
+    height: 100%;
+    width: 2px;
+    background: white;
+  }
+
+  .lines {
+    margin-top: 40px;
+    height: calc(100% - 40px);
+    width: 100%;
+    background-image: repeating-linear-gradient(black 0px, 24px, darkorange 25px);
+  }
+
+  .text {
+    color: white;
+    position: absolute;
+    top: 65px;
+    left: 55px;
+    bottom: 10px;
+    right: 10px;
+    line-height: 25px;
+    font-family: 'Indie Flower';
+    overflow: hidden;
+    outline: none;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  .fade {
+    opacity: 0;
+    transition: 1s linear;
+  }
+
+  .btn {
+    position: fixed;
+    width: 100vw;
+    height: 3.5rem;
+    /* bottom: 0; */
+    /* margin-bottom: 2rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: darkorange;
+    opacity: 0.5;
+    transition: 1s linear;
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+  }
+
+  button {
+    padding: 0.6rem;
+    border-radius: 35px;
+    background-color: darkorange;
+    outline: none;
+    border: none;
+    margin: 1rem;
+    color: white;
+    width: 7rem;
+    opacity: 1;
+  }
+
+  button:hover {
+    border: 1px solid darkorange;
+    background-color: black;
+    color: darkorange;
+    transition: 0.7s linear;
+  }
+  a{
+    color: darkorange;
+  }
+</style>
+
+  <div class="paper">
+    <div class="lines">
+      <div class="text" spellcheck="true">
+        <h2 style="transition: 1s;">hi</h2> <br />
+        <span class="txt-type" data-wait="2500"
+          data-words="[&quot; &nbsp;&nbsp;I am Anthony, a Frontend developer with a passion to innovate, create and design Softwares for mass usage. <br> &nbsp;&nbsp; Am currently a student of the University of Lagos studying computer Engineering, when am not engaged in school activities I run a company Called <a href='http://thekrom.tech'>KROMTECH</a>, in which i lead a group of student developers to solve student related issues with technology, due to this have grained knowledge in different tech stack ranging from Javascript(and it's frameworks) for web to Dart(Flutter) for Mobile and ocassionally nodejs and mongoDB for backend and databases. I also occassionally volunteer, tutor and mentor in various tech events <br> &nbsp;&nbsp; During my free-time you would catch me watching animes or just reading more programming related books  &quot;]">
+          <span class="txt"></span></span> <span class="material-icons">edit</span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="btn">
+    
+    <div onClick='load()'><button>Menu</button></div>
+    <div><button>Experience</button></div>
+  </div>
+        `}
+</script>
 
 </html>

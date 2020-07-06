@@ -14,7 +14,7 @@ class TypeWriter {
 
     type() {
         //the number 40 is how fast the characters are typed on screen
-        const typing = setTimeout(() => this.type(), 40)
+        const typing = setTimeout(() => this.type(), 4)
         //current index of words
         const current = this.wordIndex % this.words.length;
         //get full text of current word
