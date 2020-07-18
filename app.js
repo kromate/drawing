@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', start);
 
         type() {
             //the number 40 is how fast the characters are typed on screen
-            const typing = setTimeout(() => this.type(), 4)
+            const typing = setTimeout(() => this.type(), 20)
             //current index of words
             const current = this.wordIndex % this.words.length;
             //get full text of current word

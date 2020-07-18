@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: 'Galada', cursive;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      transition: 1s ease;
+
+    }
+
+    .card {
+      background-color: darkorange;
+      padding: 1px;
+      width: 200px;
+      height: 63px;
+      /* color: white; */
+      border-radius: 2px;
+      box-shadow: 2px 3px 1px white;
+      transition: 10s;
+      margin: 5px;
+      text-align: center;
+      transition: 1s linear;
+    }
+
+    .card:hover {
+      padding: 5px;
+      width: fit-content;
+      height: fit-content;
+      transition: 1s ease;
+    }
+
+    main {
+      justify-content: space-evenly;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      margin: auto 0px;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    a{
+      text-decoration: underline;
+      text-emphasis: none;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="card">
+      <h3>Founder of Kromtech</h3>
+      <p>Kromtech is a Startup that builds applications and softwares for student Usage</p>
+      <p>Created and maintained several web applications while working with a team of individuals to ensure optimal run-time functionalities and speed </p>
+    </div>
+
+    <div class="card">
+      <h3>Tutor and Mentor</h3>
+      <p>Taught various students from different discipline front-end develop at both <a href="http://ecx.website">ECX</a> and <a href="https://dscunilag.dev/">DSC Unilag</a> </p>
+      <p>Mentored a Group of 22 individuals in frontend development during the Google Africa Developer Scholarship (GADS2020) </p>
+    </div>
+
+    <div class="card">
+      <h3>Freelancer</h3>
+      <p>Occasional take on frontend development gigs ranging from volunteering to build sites for NGO's to paid part-time gigs </p>
+    </div>
+
+    <div class="card">
+      <h3>Hackacthons</h3>
+      
+    </div>
+
+  </main>
+
+
+
+</body>
+
+</html>
