@@ -18,7 +18,7 @@
       flex-wrap: wrap;
       justify-content: space-evenly;
       align-items: center;
-      transition: 1s ease;
+      transition: width 1s ease;
 
     }
 
@@ -27,20 +27,19 @@
       padding: 1px;
       width: 200px;
       height: 63px;
-      /* color: white; */
       border-radius: 2px;
       box-shadow: 2px 3px 1px white;
       transition: 10s;
       margin: 5px;
       text-align: center;
-      transition: 1s linear;
+      transition: 2s ease;
     }
 
     .card:hover {
       padding: 5px;
       width: fit-content;
       height: fit-content;
-      transition: 1s ease;
+      transition: 2s ease;
     }
 
     main {
@@ -61,10 +60,62 @@
       text-emphasis: none;
       color: black;
     }
+    ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    li{
+      border: 1px solid ;
+      margin: 5px 0px;
+      padding: 0;
+    }
+      .btn {
+    position: fixed;
+    width: 100vw;
+    height: 3.5rem;
+    /* bottom: 0; */
+    /* margin-bottom: 2rem; */
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: darkorange;
+    opacity: 0.5;
+    transition: 1s linear;
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+  }
+
+  button {
+    padding: 0.6rem;
+    border-radius: 35px;
+    background-color: darkorange;
+    outline: none;
+    border: none;
+    margin: 1rem;
+    color: white;
+    width: 7rem;
+    opacity: 1;
+  }
+
+  button:hover {
+    border: 1px solid darkorange;
+    background-color: black;
+    color: darkorange;
+    transition: 0.7s linear;
+  }
   </style>
 </head>
 
 <body>
+    <div class="btn">
+      <div onclick="intro()"><button>About Me</button></div>
+      <div onClick='load()'><button>Menu</button></div>      
+      <div><button>Projects</button></div>
+    </div>
   <main>
     <div class="card">
       <h3>Founder of Kromtech</h3>
@@ -85,7 +136,15 @@
 
     <div class="card">
       <h3>Hackacthons</h3>
-      
+      <p>Participated in various hackathons, innovative challenges and coding competition</p>
+      <ul>
+        <li>Open Hack Week (Built a member management web service for Interswitch groups)</li>
+        <li>Data for Goverance (Created a system to help with Urban planning using ML and Data Visualization.)</li>
+        <li>Rave With Flutterwave (Built a platform where students could get Tutors online and make payments to such tutor )</li>
+        <li>Fsi.ng (Tried to improve the current KYC process using AI)</li>
+        <li>Stack REform (Created an ML model that checked</li>
+        etc
+      </ul>
     </div>
 
   </main>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: 'Galada', cursive;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      transition: width 1s ease;
+
+    }
+
+    .card {
+      background-color: darkorange;
+      padding: 1px;
+      width: 200px;
+      height: 63px;
+      border-radius: 2px;
+      box-shadow: 2px 3px 1px white;
+      transition: 10s;
+      margin: 5px;
+      text-align: center;
+      transition: 2s ease;
+    }
+    .card:hover{
+      cursor: pointer;
+    }
+
+
+    main {
+      justify-content: space-evenly;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      margin: auto 0px;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+
+    .btn {
+      position: fixed;
+      width: 100vw;
+      height: 3.5rem;
+      /* bottom: 0; */
+      /* margin-bottom: 2rem; */
+      top: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: darkorange;
+      opacity: 0.5;
+      transition: 1s linear;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    button {
+      padding: 0.6rem;
+      border-radius: 35px;
+      background-color: darkorange;
+      outline: none;
+      border: none;
+      margin: 1rem;
+      color: white;
+      width: 7rem;
+      opacity: 1;
+    }
+
+    button:hover {
+      border: 1px solid darkorange;
+      background-color: black;
+      color: darkorange;
+      transition: 0.7s linear;
+    }
+    .mail{
+      background-color: #b23121;
+    }
+    .twitter{
+      background-color: #00acee;
+    }
+    .instagram{
+      background-color:#3f729b ;
+    }
+    .github{
+      background-color: #211f1f;
+    }
+    .whatsapp{
+      background-color: #25d366;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="btn">
+    <div onclick="intro()"><button>Projects</button></div>
+    <div onClick='load()'><button>Menu</button></div>
+  </div>
+  <main>
+    <div class="card mail">
+      <h3>Mail</h3>  
+    </div>
+
+    <div class="card twitter">
+      <h3>Twitter</h3>  
+    </div>
+
+    <div class="card instagram">
+      <h3>Instagram</h3>  
+    </div>
+
+    <div class="card github">
+      <h3>Github</h3>  
+    </div>
+
+    <div class="card whatsapp">
+      <h3>Whatsapp</h3>  
+    </div>
+
+
+  </main>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: 'Galada', cursive;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      transition: width 1s ease;
+      overflow-x: hidden;
+    }
+
+
+    .btn {
+      position: absolute;
+      width: 100vw;
+      height: 3.5rem;
+      /* bottom: 0; */
+      /* margin-bottom: 2rem; */
+      top: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: darkorange;
+      opacity: 0.5;
+      transition: 1s linear;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    button {
+      padding: 0.6rem;
+      border-radius: 35px;
+      background-color: darkorange;
+      outline: none;
+      border: none;
+      margin: 1rem;
+      color: white;
+      width: 7rem;
+      opacity: 1;
+    }
+
+    button:hover {
+      border: 1px solid darkorange;
+      background-color: black;
+      color: darkorange;
+      transition: 0.7s linear;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1em;
+      position: absolute;
+      top: 20%;
+    }
+
+    @media screen and (max-width: 900px) {
+      main {
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      main {
+        grid-template-columns: repeat(1, 1fr);
+
+      }
+    }
+
+    .contain {
+      background-color: transparent;
+      border: 1px solid darkgoldenrod;
+      width: 17em;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .contain h2 {
+      background-color: darkorange;
+      height: 67px;
+      padding-top: 0;
+      margin-top: 0;
+      /* border-radius: 20px 20px 0 0; */
+      border: 0;
+    }
+
+    .contain p {
+      color: darkgoldenrod;
+
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-evenly;
+      border-top: 1px solid white;
+ 
+    }
+
+    .stack {
+      color: darkgray;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="btn">
+    <div onclick="intro()"><button>Projects</button></div>
+    <div onClick='load()'><button>Menu</button></div>
+  </div>
+  <main>
+
+    <div class="contain">
+      <h2>Face recognition attendance system</h2>
+      <p> This was built for an organisation to improve their attendance system during the Conavirus period <br>
+        <span class="stack"> stack includes Tensorflow.js, Javascript, electron for the desktop version and firebase
+          for the backend </span> </p>
+      <div class="footer">
+        <a href="">Github</a>
+        <a href="">Live link</a>
+      </div>
+    </div>
+
+    <div class="contain">
+      <h2>Studee API</h2>
+      <p> This was built for a question asking platform, sort of stack overflow for Students <br>
+        <span class="stack"> stack includes Node.js, Express.js, MongoDB and Heroku </span> </p>
+      <div class="footer">
+        <a href="">Github</a>
+        <a href="">Live link</a>
+      </div>
+    </div>
+
+    <div class="contain">
+      <h2>Studee</h2>
+      <p> A web platform for students to get respective university past Questions, Course Outlines and many more<br>
+        <span class="stack"> stack includes Socket.io for communication, rave with flutterwave for payments, materialize.css for the css framework </span> </p>
+      <div class="footer">
+        <a href="">Github</a>
+        <a href="">Live link</a>
+      </div>
+    </div>
+
+    <div class="contain">
+      <h2>KTB</h2>
+      <p> A bloging platform for students that support both audio and text format</p>
+      <span class="stack"> stack includes Vanilla Javascript, firebase and mongodb </span> </p>
+      <div class="footer">
+        <a href="">Github</a>
+        <a href="">Live link</a>
+      </div>
+    </div>
+
+
+  </main>
+
+
+
+</body>
+
+</html>

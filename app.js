@@ -170,10 +170,9 @@ window.addEventListener('DOMContentLoaded', start);
       </div>
     </div>
   </div>
-  <div class="btn">
-    
+  <div class="btn">    
     <div onClick='load()'><button>Menu</button></div>
-    <div><button>Experience</button></div>
+    <div onClick='exp()'><button>Experience</button></div>
   </div>
         `
     init()
@@ -437,7 +436,7 @@ function load() {
 
     <h1>Hello</h1>
     <p class="nav-item" onClick='intro()'><span class="nav-name">About Me</span></p>
-    <p class="nav-item"><span class="nav-name">Experience</span></p>
+    <p class="nav-item" onClick='exp()'><span class="nav-name">Experience</span></p>
     <p class="nav-item"><span class="nav-name">Projects</span></p>
     <p class="nav-item"><span class="nav-name">Contact</span></p>
     <p class="nav-item"><span class="nav-name">Resume</span></p>
@@ -447,4 +446,168 @@ function load() {
 
 }
 
+function exp() {
+  const body = document.querySelector('body')
+  body.innerHTML = ` 
+    <style>
+    body {
+      font-family: 'Galada', cursive;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      transition: width 1s ease;
+        animation: fade 3s forwards;
+
+    }
+
+        @keyframes fade {
+    0% {
+      opacity: 0;
+      z-index: -1;
+      display: none;
+    }
+
+    100% {
+      opacity: 1;
+      z-index: 2;
+      display: block;
+    }
+  }
+
+    .card {
+      background-color: darkorange;
+      padding: 1px;
+      width: 200px;
+      height: 63px;
+      border-radius: 2px;
+      box-shadow: 2px 3px 1px white;
+      transition: 10s;
+      margin: 5px;
+      text-align: center;
+      transition: 2s ease;
+    }
+
+    .card:hover {
+      padding: 5px;
+      width: fit-content;
+      height: fit-content;
+      transition: 2s ease;
+    }
+
+    main {
+      justify-content: space-evenly;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      margin: auto 0px;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    a{
+      text-decoration: underline;
+      text-emphasis: none;
+      color: black;
+    }
+    ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    li{
+      border: 1px solid ;
+      margin: 5px 0px;
+      padding: 0;
+    }
+      .btn {
+    position: fixed;
+    width: 100vw;
+    height: 3.5rem;
+    /* bottom: 0; */
+    /* margin-bottom: 2rem; */
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: darkorange;
+    opacity: 0.5;
+    transition: 1s linear;
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+  }
+
+  button {
+    padding: 0.6rem;
+    border-radius: 35px;
+    background-color: darkorange;
+    outline: none;
+    border: none;
+    margin: 1rem;
+    color: white;
+    width: 7rem;
+    opacity: 1;
+  }
+
+  button:hover {
+    border: 1px solid darkorange;
+    background-color: black;
+    color: darkorange;
+    transition: 0.7s linear;
+  }
+  </style>
+
+    <div class="btn">
+      <div onclick="intro()"><button>About Me</button></div>
+      <div onClick='load()'><button>Menu</button></div>      
+      <div><button>Projects</button></div>
+    </div>
+  <main>
+    <div class="card">
+      <h3>Founder of Kromtech</h3>
+      <p>Kromtech is a Startup that builds applications and softwares for student Usage</p>
+      <p>Created and maintained several web applications while working with a team of individuals to ensure optimal run-time functionalities and speed </p>
+    </div>
+
+    <div class="card">
+      <h3>Tutor and Mentor</h3>
+      <p>Taught various students from different discipline front-end develop at both <a href="http://ecx.website">ECX</a> and <a href="https://dscunilag.dev/">DSC Unilag</a> </p>
+      <p>Mentored a Group of 22 individuals in frontend development during the Google Africa Developer Scholarship (GADS2020) </p>
+    </div>
+
+    <div class="card">
+      <h3>Freelancer</h3>
+      <p>Occasional take on frontend development gigs ranging from volunteering to build sites for NGO's to paid part-time gigs </p>
+    </div>
+
+    <div class="card">
+      <h3>Hackacthons</h3>
+      <p>Participated in various hackathons, innovative challenges and coding competition</p>
+      <ul>
+        <li>Open Hack Week (Built a member management web service for Interswitch groups)</li>
+        <li>Data for Goverance (Created a system to help with Urban planning using ML and Data Visualization.)</li>
+        <li>Rave With Flutterwave (Built a platform where students could get Tutors online and make payments to such tutor )</li>
+        <li>Fsi.ng (Tried to improve the current KYC process using AI)</li>
+        <li>Stack REform (Created an ML model that checked</li>
+        etc
+      </ul>
+    </div>
+
+  </main>
+
+
+
+  `
+}
 setTimeout(load, 2300)
